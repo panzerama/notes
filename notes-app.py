@@ -11,6 +11,7 @@ def get_note_with_name(name):
 	f = open('linux', 'w')
 	for line in f:
 		response += line
+		
     return response
 
 @app.route('/note')
