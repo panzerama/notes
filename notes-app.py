@@ -1,4 +1,5 @@
 from flask import Flask
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -7,7 +8,10 @@ def hello_world():
 
 @app.route('/note/<name>')
 def get_note_with_name(name):
-    return 'Retrieve node {}'.format(name)
+	f = open('linux', 'w')
+	for line in f:
+		response += line
+    return response
 
 @app.route('/note')
 def get_a_list_of_notes():
