@@ -8,10 +8,11 @@ def hello_world():
 
 @app.route('/note/<name>')
 def get_note_with_name(name):
-	f = open('linux', 'w')
-	for line in f:
-		response += line
+    f = open('linux')
+    response = f.read()
+
     return response
+
 
 @app.route('/note')
 def get_a_list_of_notes():
