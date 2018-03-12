@@ -1,0 +1,3 @@
+graft notes/templates
+graft notes/static
+include notes/schema.sql
