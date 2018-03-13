@@ -3,6 +3,10 @@
 	<title>Welcome to the notes app!</title>
 </head>
 
-<div>
-	<textarea id="note" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">{{ text }}</textarea>
-</div>
+<form action="/note" method="POST">
+	<label>Name</label>
+	<input type="text" name="note_name" value="{{ note_name }}">
+	<label>Body</label>
+	<input type="textarea" name="note_body" value="{{ note_body }}">
+	<input type="submit" value="Save">
+</form>

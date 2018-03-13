@@ -1,9 +1,11 @@
 MANIFEST.in
 notes/__init__.py
-notes/notes-app.py
+notes/notes.py
 notes/schema.sql
 notes.egg-info/PKG-INFO
 notes.egg-info/SOURCES.txt
 notes.egg-info/dependency_links.txt
 notes.egg-info/requires.txt
 notes.egg-info/top_level.txt
+notes/templates/notes_page.html
+notes/templates/welcome_page.html

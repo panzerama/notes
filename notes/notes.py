@@ -53,9 +53,17 @@ def hello_world():
     welcome_message = 'Welcome! This API helps retrieve and save simple notes stored as files.'
     return render_template('welcome_page.html', message=welcome_message)
 
+@app.route('/note', methods=['GET', 'POST'])
+def new_note():
+    if request.method == 'GET':
+        return render_template('notes_page.html')
+
+    if request.method == 'POST':
+        return render_template('notes_page.html', note_name="a thing!", note_body="another thing!")
+
 @app.route('/note/<name>')
 def get_note_with_name(name):
-    response = "some value!"
+    response = "{}".format(name)
 
     return render_template('notes_page.html', text=response)
 
